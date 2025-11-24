@@ -1,0 +1,150 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     INSTRUCCIONES RÁPIDAS - PÁGINA WEB TALLER DE POLARIZADO     ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🚀 INICIO RÁPIDO
+================
+
+1. Abre "index.html" para ver tu página web pública
+2. Para editar el contenido, abre directamente "admin.html"
+3. Haz cambios en el panel de administración
+4. Haz clic en "Guardar Todos los Cambios"
+5. Recarga "index.html" para ver los cambios
+
+⚠️ IMPORTANTE: El panel de administración (admin.html) es PRIVADO.
+   Solo tú debes tener acceso a este archivo. Los visitantes de tu
+   página web solo verán "index.html" sin el botón de administración.
+
+
+📝 QUÉ PUEDES CONFIGURAR
+========================
+
+✓ Logo de tu taller
+✓ Nombre de la empresa
+✓ Todos los textos (títulos, descripciones)
+✓ Imágenes de trabajos realizados
+✓ Servicios que ofreces
+✓ Lista de precios
+✓ Preguntas frecuentes
+✓ Información de contacto
+✓ Enlaces a redes sociales
+✓ Colores del sitio web
+
+
+🎨 CÓMO SUBIR IMÁGENES
+======================
+
+1. Ve al panel de administración (admin.html)
+2. Busca el área donde dice "Haz clic para subir"
+3. Haz clic y selecciona tu imagen
+4. La imagen se cargará automáticamente
+5. No olvides hacer clic en "Guardar Todos los Cambios"
+
+
+💡 CONSEJOS IMPORTANTES
+=======================
+
+• Usa imágenes de buena calidad pero no muy pesadas
+• Escribe textos claros y atractivos
+• Actualiza tu galería con trabajos recientes
+• Revisa que tu información de contacto esté correcta
+• Prueba tu sitio en el celular para ver cómo se ve
+
+
+📱 CONFIGURAR WHATSAPP
+======================
+
+En el panel de administración, sección "Contacto":
+- Escribe tu número con código de país
+- Ejemplo: +521234567890 (sin espacios)
+- Esto creará un enlace directo a WhatsApp
+
+
+🔄 CÓMO ACTUALIZAR CONTENIDO
+=============================
+
+1. Abre admin.html
+2. Navega por las secciones del menú izquierdo:
+   - General (logo, textos principales)
+   - Servicios (tipos de polarizado)
+   - Galería (fotos de trabajos)
+   - Precios (planes y tarifas)
+   - FAQ (preguntas frecuentes)
+   - Contacto (dirección, teléfono, etc.)
+   - Diseño (colores e imagen de fondo)
+3. Haz tus cambios
+4. Clic en "Guardar Todos los Cambios"
+
+
+❓ PREGUNTAS COMUNES
+====================
+
+P: ¿Necesito internet para usar esto?
+R: No, todo funciona sin internet en tu computadora.
+
+P: ¿Los cambios se guardan automáticamente?
+R: No, debes hacer clic en "Guardar Todos los Cambios".
+
+P: ¿Puedo agregar más servicios?
+R: Sí, haz clic en "Agregar Servicio" en la sección Servicios.
+
+P: ¿Cómo cambio los colores?
+R: Ve a la sección "Diseño" en el panel de administración.
+
+P: ¿Puedo eliminar secciones?
+R: Puedes vaciar el contenido, pero las secciones permanecen.
+
+P: ¿Aparecerá el botón Admin en mi página pública?
+R: No, el botón Admin ha sido eliminado. Solo tú puedes acceder
+   abriendo directamente el archivo admin.html
+
+
+🌐 PARA PUBLICAR EN INTERNET
+=============================
+
+Esta página funciona en tu computadora. Para publicarla en internet:
+
+1. Necesitas contratar un servicio de hosting web
+2. Sube todos los archivos (.html, .css, .js)
+3. Tu hosting te dará una dirección web (dominio)
+
+Servicios recomendados:
+- Hostinger
+- GoDaddy
+- Bluehost
+- 000webhost (gratis)
+
+
+📂 ARCHIVOS IMPORTANTES
+=======================
+
+index.html       → Tu página web principal (pública)
+admin.html       → Panel de administración (privado - solo para ti)
+README.md        → Instrucciones completas (más detalladas)
+
+
+⚠️ IMPORTANTE
+=============
+
+• NO borres ningún archivo .html, .css o .js
+• Haz respaldo de tu configuración periódicamente
+• Si algo sale mal, recarga la página
+• Los cambios se guardan en tu navegador
+• Mantén el archivo admin.html privado
+
+
+🎉 ¡LISTO PARA USAR!
+====================
+
+Tu página web está completamente funcional.
+Personalízala con tu información y comienza a usarla.
+
+Para más detalles, lee el archivo README.md
+
+
+═══════════════════════════════════════════════════════════════════
+
+¿Necesitas ayuda? Revisa el archivo README.md para instrucciones
+más detalladas sobre cada función.
+
+═══════════════════════════════════════════════════════════════════

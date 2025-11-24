@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Polarizado - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <img id="nav-logo-img" src="" alt="Logo" onerror="this.style.display='none'">
+                <span id="nav-company-name">Mi Taller de Polarizado</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 id="hero-title">Taller de Polarizado Profesional</h1>
+            <p id="hero-subtitle">Protección y estilo para tu vehículo</p>
+            <a href="#contacto" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 id="about-title">Expertos en Polarizado Automotriz</h3>
+                    <p id="about-description">
+                        Somos un taller especializado en la instalación de películas de polarizado para vehículos. 
+                        Con años de experiencia, ofrecemos servicios de calidad garantizada utilizando las mejores 
+                        marcas del mercado. Nuestro equipo de profesionales está capacitado para brindarte el mejor 
+                        servicio y asesoramiento personalizado.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <span id="feature-1">Garantía de Calidad</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span id="feature-2">Personal Capacitado</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span id="feature-3">Servicio Rápido</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img id="about-img" src="" alt="Sobre Nosotros" onerror="this.src='https://via.placeholder.com/500x400?text=Imagen+del+Taller'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Beneficios del Polarizado</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>Protección UV</h3>
+                    <p>Bloquea hasta el 99% de los rayos UV dañinos</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-temperature-low"></i>
+                    <h3>Control de Temperatura</h3>
+                    <p>Reduce el calor interior hasta en un 60%</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-eye-slash"></i>
+                    <h3>Privacidad</h3>
+                    <p>Mayor privacidad y seguridad para ti y tu familia</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Protección</h3>
+                    <p>Evita que el vidrio se astille en caso de impacto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid" id="services-container">
+                <!-- Los servicios se cargarán dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galería de Trabajos</h2>
+            <p class="section-subtitle">Algunos de nuestros trabajos realizados</p>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Las imágenes se cargarán dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Precios -->
+    <section id="precios" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Nuestros Precios</h2>
+            <p class="section-subtitle">Planes accesibles para todo tipo de vehículo</p>
+            <div class="pricing-grid" id="pricing-container">
+                <!-- Los precios se cargarán dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-container" id="faq-container">
+                <!-- Las preguntas se cargarán dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p id="contact-address">Calle Principal #123, Ciudad</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p id="contact-phone">+1 234 567 890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p id="contact-email">info@tallerpolarizado.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario</h4>
+                            <p id="contact-hours">Lun - Sáb: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" id="social-facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" id="social-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" id="social-whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envíanos un mensaje</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Teléfono" required>
+                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footer-text">&copy; 2024 Taller de Polarizado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
