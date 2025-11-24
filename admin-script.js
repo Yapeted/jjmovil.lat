@@ -498,8 +498,55 @@ document.getElementById('show-logo').addEventListener('change', (e) => {
     currentConfig.showLogo = e.target.checked;
 });
 
+// Función de logout
+function handleLogout() {
+    if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+        auth.logout();
+        window.location.href = 'login.html';
+    }
+}
+
+// Mostrar información del usuario actual
+function displayCurrentUser() {
+    const user = auth.getCurrentUser();
+    if (user) {
+        const usernameElement = document.getElementById('currentUsername');
+        if (usernameElement) {
+            usernameElement.textContent = user.username;
+        }
+    }
+}
+
 // Inicializar
 document.addEventListener('DOMContentLoaded', () => {
+    // Verificar autenticación
+    if (!auth.isAuthenticated()) {
+        window.location.href = 'login.html';
+        return;
+    }
+    
+    // Mostrar usuario actual
+    displayCurrentUser();
+    
+    // Configurar botón de logout
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', handleLogout);
+        
+        // Agregar efecto hover
+        logoutBtn.addEventListener('mouseenter', function() {
+            this.style.background = '#c82333';
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 4px 8px rgba(220, 53, 69, 0.3)';
+        });
+        
+        logoutBtn.addEventListener('mouseleave', function() {
+            this.style.background = '#dc3545';
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+    }
+    
     loadConfig();
     // Cargar estado del checkbox
     if (currentConfig.showLogo !== undefined) {

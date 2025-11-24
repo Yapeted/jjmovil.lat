@@ -300,5 +300,167 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Funciones del Modal de Login
+function toggleModalPassword(inputId, button) {
+    const input = document.getElementById(inputId);
+    const icon = button.querySelector('i');
+    
+    if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+}
+
+function showLoginAlert(message, type) {
+    const alert = document.getElementById('loginAlertMessage');
+    const alertText = document.getElementById('loginAlertText');
+    const icon = alert.querySelector('i');
+    
+    alertText.textContent = message;
+    alert.className = `login-alert ${type} show`;
+    
+    if (type === 'success') {
+        icon.className = 'fas fa-check-circle';
+    } else {
+        icon.className = 'fas fa-exclamation-circle';
+    }
+    
+    setTimeout(() => {
+        alert.classList.remove('show');
+    }, 5000);
+}
+
+function hideLoginAlert() {
+    const alert = document.getElementById('loginAlertMessage');
+    alert.classList.remove('show');
+}
+
 // Inicializar
-document.addEventListener('DOMContentLoaded', applyConfig);
+document.addEventListener('DOMContentLoaded', () => {
+    applyConfig();
+    
+    // Modal de Login
+    const loginModal = document.getElementById('loginModal');
+    const loginMenuBtn = document.getElementById('loginMenuBtn');
+    const closeLoginModal = document.getElementById('closeLoginModal');
+    
+    // Abrir modal
+    if (loginMenuBtn) {
+        loginMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    
+    // Cerrar modal
+    if (closeLoginModal) {
+        closeLoginModal.addEventListener('click', () => {
+            loginModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+            hideLoginAlert();
+        });
+    }
+    
+    // Cerrar al hacer clic fuera del modal
+    loginModal.addEventListener('click', (e) => {
+        if (e.target === loginModal) {
+            loginModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+            hideLoginAlert();
+        }
+    });
+    
+    // Tabs del modal
+    document.querySelectorAll('.login-tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const tab = button.dataset.tab;
+            
+            // Actualizar botones
+            document.querySelectorAll('.login-tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+            
+            // Actualizar contenido
+            document.querySelectorAll('.login-tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(`modal-${tab}-form`).classList.add('active');
+            
+            // Limpiar alerta
+            hideLoginAlert();
+        });
+    });
+    
+    // Manejar login
+    document.getElementById('modalLoginForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const username = document.getElementById('modal-login-username').value.trim();
+        const password = document.getElementById('modal-login-password').value;
+        
+        const submitBtn = e.target.querySelector('.login-btn-submit');
+        submitBtn.classList.add('loading');
+        
+        setTimeout(() => {
+            const result = auth.login(username, password);
+            
+            submitBtn.classList.remove('loading');
+            
+            if (result.success) {
+                showLoginAlert('¡Inicio de sesión exitoso! Redirigiendo...', 'success');
+                setTimeout(() => {
+                    window.location.href = 'admin.html';
+                }, 1000);
+            } else {
+                showLoginAlert(result.message, 'error');
+            }
+        }, 500);
+    });
+    
+    // Manejar registro
+    document.getElementById('modalRegisterForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const username = document.getElementById('modal-register-username').value.trim();
+        const password = document.getElementById('modal-register-password').value;
+        const confirmPassword = document.getElementById('modal-register-password-confirm').value;
+        
+        if (password !== confirmPassword) {
+            showLoginAlert('Las contraseñas no coinciden', 'error');
+            return;
+        }
+        
+        const submitBtn = e.target.querySelector('.login-btn-submit');
+        submitBtn.classList.add('loading');
+        
+        setTimeout(() => {
+            const result = auth.register(username, password);
+            
+            submitBtn.classList.remove('loading');
+            
+            if (result.success) {
+                showLoginAlert(result.message + ' Ahora puedes iniciar sesión.', 'success');
+                e.target.reset();
+                
+                setTimeout(() => {
+                    document.querySelector('[data-tab="login"]').click();
+                    document.getElementById('modal-login-username').value = username;
+                }, 2000);
+            } else {
+                showLoginAlert(result.message, 'error');
+            }
+        }, 500);
+    });
+    
+    // Limpiar alertas al escribir
+    document.querySelectorAll('.login-form-group input').forEach(input => {
+        input.addEventListener('input', hideLoginAlert);
+    });
+});
